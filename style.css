@@ -1,142 +1,200 @@
 /* Dinh dang chung */
-
 body {
-    font-family: 'Source Sans Pro', Courier, monospace;
-    font-size: 12px;
-    color: white;
-
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
+  font-family: 'Source Sans Pro', Courier, monospace;
+  font-size: 12px;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
 }
 
 /* Dinh dang class layout */
-
 .cover {
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #02020261;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #02020261;
 }
 
 img.bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .top-info {
-    position: absolute;
-    top: 0;
-
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 3%;
-    padding: 0px 6%;
-    box-sizing: border-box;
-    font-size: 50px;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: 3%;
+  padding: 0px 6%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 50px;
 }
 
 .top-info p {
-    margin: 0;
+  margin: 0;
 }
 
 .info-location p.date {
-    font-size: 26px;
+  font-size: 26px;
 }
 
 .info-time {
-    flex: 1;
-    text-align: right;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
 }
 
 .info-time span {
-    font-size: 26px;
+  font-size: 26px;
 }
 
 /* Temp */
 .main-temp {
-    position: absolute;
-    bottom: 300px;
-    left: 50px;
-    /* background: gray; */
-    display: flex;
+  position: absolute;
+  bottom: 300px;
+  left: 50px;
+  /* background: gray; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .day-of-week {
-    text-transform: uppercase;
-    font-size: 20px;
-    background: black;
-    width: 80px;
-    text-align: center;
-    padding: 5px;
-    border-radius: 20px;
-    opacity: 0.5;
+  text-transform: uppercase;
+  font-size: 20px;
+  background: black;
+  width: 80px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 20px;
+  opacity: 0.5;
 }
 
 .main-temp img {
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
 }
 
 .main-temp p {
-    font-size: 62px;
-    margin: 0;
+  font-size: 62px;
+  margin: 0;
 }
 
 .main-temp sup {
-    font-size: 23px;
+  font-size: 23px;
 }
 
 .temp {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;  
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* Sub temp */
 .sub-temp-container {
-    position: absolute;
-    /* background: #333; */
-    bottom: 50px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 60px;
-    box-sizing: border-box;
-    width: 100%;
+  position: absolute;
+  /* background: #333; */
+  bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
 }
 
 .sub-temp {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .sub-temp img {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 
 .sub-temp p {
-    font-size: 40px;
-    margin: 0;
+  font-size: 40px;
+  margin: 0;
 }
 
 .sub-temp sup {
-    font-size: 23px;
+  font-size: 23px;
 }
 
 .dow {
-    text-transform: uppercase;
-    font-size: 20px;
-    background: black;
-    width: 80px;
-    text-align: center;
-    padding: 5px;
-    border-radius: 20px;
-    opacity: 0.5;
+  text-transform: uppercase;
+  font-size: 20px;
+  background: black;
+  width: 80px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 20px;
+  opacity: 0.5;
 }
+
+/* media query responsive */
+/* cho thiet bi do rong man hinh lon nhat*/
+@media (max-width: 768px) {
+  .top-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .info-time {
+    text-align: center;
+  }
+  .main-temp {
+    text-align: center;
+    width: 100%;
+    margin-right: 85px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-right: 49px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    bottom: 35%;
+    left: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

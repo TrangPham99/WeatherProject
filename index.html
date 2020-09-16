@@ -1,117 +1,38 @@
 
-<!-- saved from url=(0031)http://127.0.0.1:5500/ThoiTiet/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="./index_files/style.css">
-        <script src="./index_files/jquery-3.5.1.min.js.download"></script>
-        <script src="./index_files/script.js.download"></script>
+
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script src="./script.js"></script>
     </head>
-    <body>
-        <img class="bg-img" src="./index_files/bg.png">
-        <div class="cover"></div>
+<body>
+    <img class="bg-img" src="./img/bg.png">
+    <div class="cover"></div>
 
-        <div class="top-info">
-            <div class="info-location">
-                <p>New York, NY</p>
-                <p class="date">March 28, 2018</p>
+    <div class="top-info">
+        <div class="info-location">
+            <p>New York, NY</p>
+            <p class="date">March 28, 2018</p>
+        </div>
+        <div class="info-time">
+            <p>09:45 <span>AM</span></p>
+        </div>
+    </div>
+
+    <div class="main-temp">
+
+        <img src="./img/icon_sunny.png">
+        <div class="temp">
+            <div class="day-of-week">
+                Today
             </div>
-            <div class="info-time">
-                <p>09:45 <span>AM</span></p>
-            </div>
+            <p>31<sup>o<sup></sup></sup></p>
         </div>
+    </div>
 
-        <div class="main-temp">
-
-            <img src="./index_files/03d@2x.png">
-            <div class="temp">
-                <div class="day-of-week">
-                    Today
-                </div>
-                <p>31<sup>o<sup></sup></sup></p>
-            </div>
-        </div>
-
-        <div class="sub-temp-container"><div class="sub-temp" data-index="1">
-        <div class="dow">
-        SUN
-        </div>
-        <img src="./index_files/icon_sunny.png">
-        <p>20<sup>o</sup></p>
-    </div><div class="sub-temp" data-index="1">
-        <div class="dow">
-        SAT
-        </div>
-        <img src="./index_files/icon_sunny.png">
-        <p>20<sup>o</sup></p>
-    </div><div class="sub-temp" data-index="1">
-        <div class="dow">
-        SUN
-        </div>
-        <img src="./index_files/icon_sunny.png">
-        <p>20<sup>o</sup></p>
-    </div><div class="sub-temp" data-index="1">
-        <div class="dow">
-        SUN
-        </div>
-        <img src="./index_files/icon_sunny.png">
-        <p>20<sup>o</sup></p>
-    </div><div class="sub-temp" data-index="1">
-        <div class="dow">
-        SUN
-        </div>
-        <img src="./index_files/icon_sunny.png">
-        <p>20<sup>o</sup></p>
-    </div><div class="sub-temp" data-index="1">
-        <div class="dow">
-        SUN
-        </div>
-        <img src="./index_files/icon_sunny.png">
-        <p>20<sup>o</sup></p>
-    </div><div class="sub-temp" data-index="1">
-        <div class="dow">
-        SUN
-        </div>
-        <img src="./index_files/icon_sunny.png">
-        <p>20<sup>o</sup></p>
-    </div></div>
-        <div id="buttonclick">
-            <button>Data</button>
-        </div>
-    <!-- Code injected by live-server -->
-<script type="text/javascript">
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
+    <div class="sub-temp-container">
+    </div>
 </body></html>
