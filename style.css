@@ -1,3 +1,103 @@
+#nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1000;
+}
+
+#nav a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #c1da5d;
+  margin: 0 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#nav a:hover {
+  color: aliceblue;
+}
+
+#nav a.active {
+  color: black;
+}
+
+#nav a.active::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 5px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.page-cpntainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#add-place-box {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#add-place-box form {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#add-place-box input {
+  outline: none;
+  border: none;
+  width: 35%;
+  display: block;
+  height: 30px;
+  border-radius: 6px;
+  padding: 0 15px;
+  font-size: 1.2rem;
+  opacity: 0.6;
+  font-family: "Source Sans Pro", Courier, monospace;
+  font-weight: 100;
+}
+
+#add-place-box button {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #444ac3;
+  width: 100px;
+  border-radius: 12px;
+  border: none;
+  margin-left: 4px;
+}
+
 /* Dinh dang chung */
 body {
   font-family: 'Source Sans Pro', Courier, monospace;
@@ -6,6 +106,7 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  overflow: hidden;
 }
 
 /* Dinh dang class layout */
@@ -69,6 +170,33 @@ img.bg-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-animation: moveTo 2s none;
+          animation: moveTo 2s none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.main-temp:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@-webkit-keyframes moveTo {
+  from {
+    left: -100px;
+  }
+  to {
+    left: 50px;
+  }
+}
+
+@keyframes moveTo {
+  from {
+    left: -100px;
+  }
+  to {
+    left: 50px;
+  }
 }
 
 .day-of-week {
@@ -127,6 +255,26 @@ img.bg-img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
+  -webkit-animation: move 2s none;
+          animation: move 2s none;
+}
+
+@-webkit-keyframes move {
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: 50px;
+  }
+}
+
+@keyframes move {
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: 50px;
+  }
 }
 
 .sub-temp {
@@ -143,6 +291,14 @@ img.bg-img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 10%;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.sub-temp:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .sub-temp img {
@@ -195,6 +351,13 @@ img.bg-img {
             justify-content: center;
     bottom: 35%;
     left: 0;
+  }
+  .sub-temp-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .sub-temp-container .sub-temp {
+    width: 25%;
   }
 }
 /*# sourceMappingURL=style.css.map */

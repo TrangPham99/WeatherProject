@@ -12,21 +12,21 @@ function createSubTemp( dow, img, temp, index=1){
 
     return subTempTemplate
 }
-var container = $ (".sub-temp-container")
-var subTemp = createSubTemp ("SUN", "img/icon_sunny.png",20)
-var subTemp2 = createSubTemp ("SAT", "img/icon_sunny.png",20)
-var subTemp3 = createSubTemp ("SUN", "img/icon_sunny.png",20)
-var subTemp4 = createSubTemp ("SUN", "img/icon_sunny.png",20)
-var subTemp5 = createSubTemp ("SUN", "img/icon_sunny.png",20)
-var subTemp6 = createSubTemp ("SUN", "img/icon_sunny.png",20)
-var subTemp7 = createSubTemp ("SUN", "img/icon_sunny.png",20)
+// var container = $ (".sub-temp-container")
+// var subTemp = createSubTemp ("SUN", "img/icon_sunny.png",20)
+// var subTemp2 = createSubTemp ("MON", "img/icon_sunny.png",20)
+// var subTemp3 = createSubTemp ("TUE", "img/icon_sunny.png",20)
+// var subTemp4 = createSubTemp ("WEB", "img/icon_sunny.png",20)
+// var subTemp5 = createSubTemp ("THU", "img/icon_sunny.png",20)
+// var subTemp6 = createSubTemp ("FRI", "img/icon_sunny.png",20)
+// var subTemp7 = createSubTemp ("SAT", "img/icon_sunny.png",20)
 
-var content = subTemp + subTemp2 + subTemp3 + subTemp4 + subTemp5 + subTemp6 +subTemp7
-console.log(content)
-container.html(content) // thay the hoan toan noi dung ben trong
-})
+// var content = subTemp + subTemp2 + subTemp3 + subTemp4 + subTemp5 + subTemp6 +subTemp7
+// console.log(content)
+// container.html(content) // thay the hoan toan noi dung ben trong
+
 var weatherData
-$(document).ready(function(){
+$(document).ready(function(){ 
     $.ajax({
         url:"data.json",
         dataType: "json",
@@ -36,6 +36,7 @@ $(document).ready(function(){
             console.log("da lay du lieu")
             weatherData = data
             setCurrenWeather()
+            setNextDaysWeather()
         },
         error(err){
             console.log(err)
@@ -59,18 +60,50 @@ $(document).ready(function(){
         $(".main-temp .temp p").html(tempstr)
     }
 
+    function setNextDaysWeather(){
+        const dailyDatas = weatherData.daily
+        var html = []
+        console.log(dailyDatas)
+        //lay sub temp container
+        var container = $(".sub-temp-container")
+        var daysArray = ['Sun','Mon', 'Tue', 'Web', 'Thu', 'Fri', 'Sat'];
+
+        // dailyDatas.forEach(item => {
+        for(var i = 0; i < 7; i++)
+        {
+            var item = dailyDatas[i]
+            // Sup temp container
+        
+        var imgSrc = `http://openweathermap.org/img/wn/${item.weather[0].icon}@4x.png`
+        
+        console.log(item.temp)
+        var dowIndex = new Date(item.dt *1000).getDay()
+        console.log(dowIndex)
+            
+        var celsiusTemp = item.temp.max - 273
+        var tempStr = celsiusTemp.toFixed(0)
+        
+        // Create sub-temp from template
+        var strSubTemp = createSubTemp(daysArray[dowIndex], imgSrc, tempStr)
+
+        html.push(strSubTemp)
+        };
+        var fullSubTempStr = html.join("")
+        container.html(fullSubTempStr)
+    }
+    
+
+
     // setCurrenWeather()
 
     $(".main-temp").on("click", () =>{
-      alert("click me")
+    //   alert("click me")
     })
-    printhtml = () =>{
-      
-    }
-
 
     $("#buttonclick").on("click", () =>{
         console.log("click")
-       
     })
+    printhtml = () =>{
+    }
+})
 })
