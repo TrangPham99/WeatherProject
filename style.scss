@@ -226,7 +226,7 @@ img.bg-img {
     padding: 0 60px;
     box-sizing: border-box;
     width: 100%;
-    animation: move 2s none;
+    animation: move 0.5s none;
 }
 
 @keyframes move{
@@ -244,11 +244,11 @@ img.bg-img {
     justify-content: center;
     align-items: center;
     width: 10%;
-    transition: all 0.1s;
+    transition: all 5s;
 
 
     &:hover{
-        transform: scale(1.1);
+        transform: scale(8);
     }
 }
 
